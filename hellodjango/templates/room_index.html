@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rooms</title>
+</head>
+<body>
+ <div class="container" style="margin-top: 50px;">
+
+	<table border="1">
+  <tr>
+    <th>直播间</th>
+    <th>主播</th>
+  </tr>
+  {% for room in room_list %}
+  <tr>
+    <td>{{ room.room_name }}</td>
+    <td>{{ room.user_name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+      <div class="starter-template">
+
+        {% for room in room_list %}
+            <h2>{{ room.room_name }}</h2>
+            <p>{{ room.user_name }}</p>
+        {% endfor %}
+
+      </div>
+
+    </div>
+</body>
+</html>
